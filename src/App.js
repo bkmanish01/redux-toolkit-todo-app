@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AddTodo from './components/AddTodo';
+import ListTodo from './components/ListTodo';
+import './style/style.css';
+import { Card} from 'antd';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card 
+        title={<AddTodo />} 
+        style={{ 
+          width: 500,
+          height: "50vh", 
+          backgroundColor:"#ec680b",
+          textAlign:"center",
+          paddingBottom:"30px",
+          borderRadius:"20px",
+          marginLeft:"35%"}}>
+          <ListTodo />
+      </Card>
     </div>
   );
 }
